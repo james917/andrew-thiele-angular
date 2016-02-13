@@ -1,7 +1,15 @@
 var appControllers = angular.module('appControllers', [
 
-    'mainController',
-    'homeController'
+    'homeController',
+    'aboutController',
+    'statementController',
+    'workController',
+    'workGalOneController',
+ 
+ 
+ 
+ 
+ 
  
 ]);
 
