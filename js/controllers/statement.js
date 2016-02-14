@@ -7,7 +7,7 @@ statementController.controller('StatementController', ['$scope', function($scope
 
 
 
-var menu = new Menu;
+//var menu = new Menu;
 
 
 console.log('Statment works even better!!!');

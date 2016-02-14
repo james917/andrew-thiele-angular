@@ -7173,7 +7173,7 @@ section {
  */
 .about {
   line-height: 240%;
-  font-size: 22px;
+  font-size: 20px;
   background-color: #f4f4f4;
   margin: 50px auto;
   color: #727375;
@@ -7182,5 +7182,5 @@ section {
 }
 .about p {
   padding: 10px;
-  margin: 10px;
+  margin: 10px 20px 0 20px;
 }
