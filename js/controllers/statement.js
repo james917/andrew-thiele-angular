@@ -5,6 +5,11 @@ statementController.controller('StatementController', ['$scope', function($scope
  $('body').addClass('aboutBody');
  $('body').removeClass('home');    
 
+
+
+var menu = new Menu;
+
+
 console.log('Statment works even better!!!');
 
 }]);

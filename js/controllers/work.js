@@ -4,6 +4,10 @@ workController.controller('WorkController', ['$scope', function($scope, $locatio
 
  $('body').addClass('aboutBody');
  $('body').removeClass('home');    
+ 
+ 
+ 
+ var menu = new Menu;
 
 console.log('Work works even better!!!');
 

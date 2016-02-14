@@ -5,7 +5,11 @@ workGalOneController.controller('WorkGalOneController', ['$scope', function($sco
  $('body').addClass('aboutBody');
  $('body').removeClass('home');    
 
+var menu = new Menu;
 
+
+
+// slider
 $('#myCarousel').carousel({
     interval: 4000
 });

@@ -1,4 +1,4 @@
-/*! andrew-thiele - v1.0.0 - 2016-02-13 */var AndrewApp = angular.module('AndrewApp', [
+/*! andrew-thiele - v1.0.0 - 2016-02-14 */var AndrewApp = angular.module('AndrewApp', [
     'ngRoute', 
     'appControllers'
 
@@ -58,6 +58,51 @@ aboutController.controller('AboutController', ['$scope', function($scope, $locat
 
  $('body').addClass('aboutBody');
  $('body').removeClass('home');    
+ 
+ 
+    
+   $('.mm-menu-toggle').addClass('menuTitleAbout');
+   
+   
+// $("button").click(function(){
+//   $(".mm-menu-toggle").removeClass("menuTitleHome");
+//   $(".mm-menu-toggle").addClass("menuTitleAboutTrans");
+// });   
+
+
+// $("a").click(function(){
+//   $(".testLink").removeClass("menuTitleAbout");
+//   //$(".mm-menu-toggle").addClass("menuTitleAboutTrans");
+// });  
+
+$("a").click(function(){
+  console.log('works')
+  //$(".testLink").find(".mm-menu-toggle").removeClass("menuTitleAbout");
+});
+
+
+//$( "a" ).find( ".mm-menu-toggle" ).css( "color", "red" );
+
+
+//     $(".mm-menu-toggle").click(function(){
+//     $("menuTitleAbout").toggleClass("menuTitleAboutTrans");
+// }) 
+   
+//     $("button").click(function(){
+//     $(".mm-menu-toggle").toggleClass("menuTitleAboutTrans");
+// })  
+   
+//    $("button").click(function(){
+//     $("#mm-menu-toggle").toggleClass("fadedOut");
+// })
+   
+
+$("[data-toggle=popover]")
+.popover({html:true})   
+ 
+var menu = new Menu;
+
+ 
 
 console.log('About works even better!!!');
 
@@ -89,57 +134,23 @@ homeController.controller('HomeController', ['$scope', function($scope, $locatio
    
    
    $('.mm-menu-toggle').addClass('menuTitleHome');
+    $('.mm-menu-toggle').removeClass('menuTitleAbout');
    
-   $("button").click(function(){
-    $("#mm-menu-toggle").toggleClass("fadedOut");
-})
-   
-   
-   
-   
-//   $("button").click(function(){
-//   $(".mm-menu-toggle").removeClass("menuTitleHome");
-//   $(".mm-menu-toggle").addClass("menuTitleHomeTrans");
-// }); 
-
-//   $("button").click(function(){
-//   $(".mm-menu-toggle").removeClass("menuTitleHomeTrans");
+// $("button").click(function(){
+//   $(".mm-menu-toggle").removeClass("menuTitleAbout");
 //   $(".mm-menu-toggle").addClass("menuTitleHome");
-// });
-
-   
-   
-// $("#menu-toggle").hover(function(e) {
-//     e.preventDefault();
-//     $("#wrapper").toggleClass("toggled");
 // });   
-
-
-// $(".menu-hover").on({
-//     'mouseenter': function (e) {
-//         e.stopPropagation();
-//                     var $lefty = $(".side-menu");
-//                     $lefty.animate({
-//                      left: parseInt($lefty.css('left')) < -95 ?
-//                      $lefty.css('left') == 0 :
-//                         -96})
-//                   }
-// });
-// $('.menu-hover').on({
-//     'mouseleave': function(){
-//         var $lefty = $(".side-menu");
-//             $lefty.animate({
-//             left: -96
-//         })
-//     }
+   
+   
+//   $("button").click(function(){
+//     $("#mm-menu-toggle").toggleClass("fadedOut");
 // })
+   
+   
+ 
 var menu = new Menu;
 
 
-// $('.mm-menu-toggle').onClick(function(e) {
-//     e.preventDefault();
-      
-// });
 
 console.log('Home works even better!!!');
 
@@ -151,6 +162,11 @@ statementController.controller('StatementController', ['$scope', function($scope
  $('body').addClass('aboutBody');
  $('body').removeClass('home');    
 
+
+
+var menu = new Menu;
+
+
 console.log('Statment works even better!!!');
 
 }]);
@@ -161,7 +177,11 @@ workGalOneController.controller('WorkGalOneController', ['$scope', function($sco
  $('body').addClass('aboutBody');
  $('body').removeClass('home');    
 
+var menu = new Menu;
 
+
+
+// slider
 $('#myCarousel').carousel({
     interval: 4000
 });
@@ -244,6 +264,10 @@ workController.controller('WorkController', ['$scope', function($scope, $locatio
 
  $('body').addClass('aboutBody');
  $('body').removeClass('home');    
+ 
+ 
+ 
+ var menu = new Menu;
 
 console.log('Work works even better!!!');
 

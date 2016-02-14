@@ -6872,11 +6872,6 @@ body.mm-menu-open {
   -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
 }
-.wrapper.mm-menu-open {
-  -webkit-transform: translateX(300px);
-  -ms-transform: translateX(300px);
-  transform: translateX(300px);
-}
 .container {
   padding: 0 72px;
 }
@@ -6913,12 +6908,11 @@ section {
 .mm-menu-toggle {
   position: fixed;
   top: 12px;
-  left: -12px;
-  z-index: 20;
+  left: -15px;
+  z-index: 120;
   width: 320px;
   height: 40px;
-  font-family: "Gotham-medium", 'Montserrat', sans-serif;
-  font-size: 32px;
+  font-size: 28px;
   text-indent: 0;
   text-transform: uppercase;
   font-style: normal;
@@ -6927,14 +6921,11 @@ section {
 .menuTitleHome {
   color: #fff;
 }
-.fader {
-  -moz-transition: opacity 0.7s linear;
-  -o-transition: opacity 0.7s linear;
-  -webkit-transition: opacity 0.7s linear;
-  transition: opacity 0.7s linear;
+.menuTitleAbout {
+  color: #333;
 }
-.fader.fadedOut {
-  opacity: 0;
+.menuTitleAboutTrans {
+  color: #fff;
 }
 .mm-menu-toggle::before,
 .mm-menu-toggle::after {
@@ -6961,6 +6952,12 @@ section {
   transition: all 0.5s;
 }
 /* active states */
+.mm-menu-toggle.fade-out.menuTitleHome.active {
+  color: #fff;
+}
+.mm-menu-toggle.menuTitleAbout.active {
+  color: #fff;
+}
 .mm-menu-toggle.active::before {
   width: 75%;
   -webkit-transform: translateY(7px) rotate(-45deg);
@@ -6981,7 +6978,7 @@ section {
 .mm-menu {
   position: fixed;
   top: 0;
-  left: -300px;
+  left: 0;
   z-index: 10;
   background-color: #fff;
   width: 100%;
@@ -7032,7 +7029,7 @@ section {
 /* list */
 .mm-menu__items {
   list-style: none;
-  margin: 0;
+  margin: 40px 0 0 0;
   padding: 0;
 }
 .mm-menu__item {
