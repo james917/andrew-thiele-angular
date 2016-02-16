@@ -2,10 +2,14 @@ var workGalOneController = angular.module('workGalOneController', []);
 
 workGalOneController.controller('WorkGalOneController', ['$scope', function($scope) {
 
-// $('body').addClass('aboutBody');
-// $('body').removeClass('home');    
 
-//var menu = new Menu;
+
+
+
+$('body').addClass('aboutBody');
+$('body').removeClass('home');    
+
+$('.mm-menu-toggle').addClass('menuTitleAbout');
 
 
 

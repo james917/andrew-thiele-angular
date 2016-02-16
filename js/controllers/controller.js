@@ -4,6 +4,7 @@ var appControllers = angular.module('appControllers', [
     'navController',
     'aboutController',
     'statementController',
+    'contactController',
     'workController',
     'workGalOneController',
  

@@ -1,6 +1,6 @@
 var homeController = angular.module('homeController', []);
 
-homeController.controller('HomeController', ['$scope', function($scope, $location) {
+homeController.controller('HomeController', ['$scope', function($scope) {
 
   $('body').addClass('home');
   $('body').removeClass('aboutBody');  

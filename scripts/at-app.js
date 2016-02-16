@@ -1,5 +1,6 @@
-/*! andrew-thiele - v1.0.0 - 2016-02-14 */var AndrewApp = angular.module('AndrewApp', [
+/*! andrew-thiele - v1.0.0 - 2016-02-16 */var AndrewApp = angular.module('AndrewApp', [
     'ngRoute', 
+    'ngAnimate',
     'appControllers'
 
 ])
@@ -19,11 +20,11 @@
     }).
     when('/statement', {
       templateUrl: 'views/statement.html',
-      //controller:  'StatementController',
+      controller:  'StatementController',
     }).
     when('/work', {
       templateUrl: 'views/work.html',
-      //controller:  'WorkController',
+      controller:  'WorkController',
     }).
     when('/work/2016', {
       templateUrl: 'views/work/work-2016.html',
@@ -47,7 +48,7 @@
     }).
     when('/contact', {
       templateUrl: 'views/contact.html',
-      // controller:  'WorkController',
+      controller:  'ContactController',
     }).
     otherwise({
       redirectTo: '/'
@@ -62,7 +63,9 @@
 
 var aboutController = angular.module('aboutController', []);
 
-aboutController.controller('AboutController', ['$scope', function($scope, $location) {
+aboutController.controller('AboutController', ['$scope', function($scope) {
+
+
 
 
  $('body').removeClass('home');    
@@ -84,12 +87,28 @@ aboutController.controller('AboutController', ['$scope', function($scope, $locat
 console.log('About works even better!!!');
 
 }]);
+var contactController = angular.module('contactController', []);
+
+contactController.controller('ContactController', ['$scope', function($scope) {
+
+ $('body').removeClass('home');    
+ $('body').addClass('aboutBody'); 
+
+
+
+//var menu = new Menu;
+
+
+console.log('Contact works even better!!!');
+
+}]);
 var appControllers = angular.module('appControllers', [
 
     'homeController',
     'navController',
     'aboutController',
     'statementController',
+    'contactController',
     'workController',
     'workGalOneController',
  
@@ -105,7 +124,7 @@ var appControllers = angular.module('appControllers', [
 
 var homeController = angular.module('homeController', []);
 
-homeController.controller('HomeController', ['$scope', function($scope, $location) {
+homeController.controller('HomeController', ['$scope', function($scope) {
 
   $('body').addClass('home');
   $('body').removeClass('aboutBody');  
@@ -135,15 +154,15 @@ navController.controller('NavController', ['$scope', function($scope, $location)
 
 var menu = new Menu;
 
-  $('body').addClass('home');
-   $('body').removeClass('aboutBody');  
+//   $('body').addClass('home');
+//   $('body').removeClass('aboutBody');  
 //  $('body').addClass('aboutBody');
 //   $('body').removeClass('home'); 
 
 
 
-$("[data-toggle=popover]")
-.popover({html:true});   
+// $("[data-toggle=popover]")
+// .popover({html:true});   
 
 
 
@@ -153,14 +172,17 @@ console.log('nav controller works!!!');
 }]);
 var statementController = angular.module('statementController', []);
 
-statementController.controller('StatementController', ['$scope', function($scope, $location) {
+statementController.controller('StatementController', ['$scope', function($scope) {
 
- $('body').addClass('aboutBody');
+
  $('body').removeClass('home');    
+ $('body').addClass('aboutBody'); 
+
+    
+ $('.mm-menu-toggle').addClass('menuTitleAbout');
+   
 
 
-
-//var menu = new Menu;
 
 
 console.log('Statment works even better!!!');
@@ -170,10 +192,14 @@ var workGalOneController = angular.module('workGalOneController', []);
 
 workGalOneController.controller('WorkGalOneController', ['$scope', function($scope) {
 
-// $('body').addClass('aboutBody');
-// $('body').removeClass('home');    
 
-//var menu = new Menu;
+
+
+
+$('body').addClass('aboutBody');
+$('body').removeClass('home');    
+
+$('.mm-menu-toggle').addClass('menuTitleAbout');
 
 
 
@@ -259,11 +285,43 @@ var workController = angular.module('workController', []);
 workController.controller('WorkController', ['$scope', function($scope) {
 
  $('body').addClass('aboutBody');
- $('body').removeClass('home');    
+ $('body').removeClass('home');   
  
+  $('.mm-menu-toggle').addClass('menuTitleAbout');
  
- 
- var menu = new Menu;
+  	 $(document).ready(function() {
+			$("#content-slider").lightSlider({
+                loop:true,
+                keyPress:true
+            });
+            $('#image-gallery').lightSlider({
+                gallery:true,
+                item:1,
+                thumbItem:9,
+                slideMargin: 0,
+                adaptiveHeight: false,
+                speed:1000,
+                auto:false,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }  
+            });
+		});
+
+
+
+        // $('#adaptive').lightSlider({
+        //     adaptiveHeight:true,
+        //     item:1,
+        //     slideMargin:0,
+        //     loop:true,
+        //     onSliderLoad: function() {
+        //         $('#adaptive').removeClass('cS-hidden');
+        //     } 
+        // });
+
+
 
 console.log('Work works even better!!!');
 

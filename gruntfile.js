@@ -40,7 +40,7 @@ module.exports = function(grunt) {
         dest: 'scripts/at-bootstrap.js'
       },
       root_frontend:{
-          src: ['libs/menu/materialMenu.js'],
+          src: ['libs/menu/materialMenu.js', 'libs/light-slider/lightslider.js'],
           dest: 'scripts/at-fe.js'
       },
 
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
       },
 
       root_frontend:{
-        files:[ 'libs/light-slider/lightslider.js'],
+        files:[ 'libs/menu/materialMenu.js', 'libs/light-slider/lightslider.js'],
         options:{
           livereload: true
         }

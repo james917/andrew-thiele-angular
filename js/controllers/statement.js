@@ -1,13 +1,16 @@
 var statementController = angular.module('statementController', []);
 
-statementController.controller('StatementController', ['$scope', function($scope, $location) {
+statementController.controller('StatementController', ['$scope', function($scope) {
 
- $('body').addClass('aboutBody');
+
  $('body').removeClass('home');    
+ $('body').addClass('aboutBody'); 
+
+    
+ $('.mm-menu-toggle').addClass('menuTitleAbout');
+   
 
 
-
-//var menu = new Menu;
 
 
 console.log('Statment works even better!!!');

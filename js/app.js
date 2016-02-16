@@ -1,5 +1,6 @@
 var AndrewApp = angular.module('AndrewApp', [
     'ngRoute', 
+    'ngAnimate',
     'appControllers'
 
 ])
@@ -19,11 +20,11 @@ var AndrewApp = angular.module('AndrewApp', [
     }).
     when('/statement', {
       templateUrl: 'views/statement.html',
-      //controller:  'StatementController',
+      controller:  'StatementController',
     }).
     when('/work', {
       templateUrl: 'views/work.html',
-      //controller:  'WorkController',
+      controller:  'WorkController',
     }).
     when('/work/2016', {
       templateUrl: 'views/work/work-2016.html',
@@ -47,7 +48,7 @@ var AndrewApp = angular.module('AndrewApp', [
     }).
     when('/contact', {
       templateUrl: 'views/contact.html',
-      // controller:  'WorkController',
+      controller:  'ContactController',
     }).
     otherwise({
       redirectTo: '/'

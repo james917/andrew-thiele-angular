@@ -1,6 +1,8 @@
 var aboutController = angular.module('aboutController', []);
 
-aboutController.controller('AboutController', ['$scope', function($scope, $location) {
+aboutController.controller('AboutController', ['$scope', function($scope) {
+
+
 
 
  $('body').removeClass('home');    
