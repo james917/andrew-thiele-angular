@@ -1,0 +1,40 @@
+<div ng-controller="NavController" class="mm-menu__header">
+    <!--<a class="menuTitleHome" ng-href="#/" style="border:solid 1px red;position:fixed;top10px;left:20px; font-size:28px;">ANDREW THIELE</a>-->
+</div>
+ <ul class="mm-menu__items">
+    <li class="mm-menu__item">
+      <a id="" class="mm-menu__link" ng-href="#/">
+        <span class="mm-menu__link-text">Home</span>
+      </a>
+    </li>
+    <li class="mm-menu__item">
+      <a class="mm-menu__link" ng-href="#/about">
+        <span class="mm-menu__link-text">About</span>
+      </a>
+    </li>
+    <li class="mm-menu__item">
+      <a class="mm-menu__link" ng-href="#/work">
+        <span class="mm-menu__link-text">Work</span>
+      </a>
+    </li>
+    <li class="mm-menu__item">
+      <a class="mm-menu__link" ng-href="#/work/2015">
+        <span class="mm-menu__link-text">2015</span>
+      </a>
+    </li>
+    <li class="mm-menu__item">
+      <a class="mm-menu__link" ng-href="#/work/2014">
+        <span class="mm-menu__link-text">2014</span>
+      </a>
+    </li>
+    <li class="mm-menu__item">
+      <a class="mm-menu__link" ng-href="#/work/2013">
+        <span class="mm-menu__link-text">2013</span>
+      </a>
+    </li>
+    <li class="mm-menu__item">
+      <a class="mm-menu__link" href="#/contact">
+        <span class="mm-menu__link-text">Connect</span>
+      </a>
+    </li>
+  </ul>

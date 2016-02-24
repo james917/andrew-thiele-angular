@@ -1,0 +1,52 @@
+<div ng-controller="NavController" class="mm-menu__header">
+
+</div>
+ <ul class="mm-menu__items">
+    <li class="mm-menu__item">
+      <a id="test" class="mm-menu__link" ng-href="#/about">
+        <span class="mm-menu__link-text">About</span>
+      </a>
+    </li>
+    <li class="mm-menu__item">
+      <a class="mm-menu__link" ng-href="#/work">
+        <span class="mm-menu__link-text">Work</span>
+      </a>
+    </li>
+    <li class="mm-menu__item">
+      <a class="mm-menu__link" ng-href="#/work/2015">
+        <span class="mm-menu__link-text">2015</span>
+      </a>
+    </li>
+    <li class="mm-menu__item">
+      <a class="mm-menu__link" ng-href="#/work/2014">
+        <span class="mm-menu__link-text">2014</span>
+      </a>
+    </li>
+    <li class="mm-menu__item">
+      <a class="mm-menu__link" ng-href="#/work/2013">
+        <span class="mm-menu__link-text">2013</span>
+      </a>
+    </li>
+    <!--<l
+    <!--<li class="mm-menu__item">-->
+    <!--  <a class="mm-menu__link" ng-href="#/statement">-->
+    <!--    <span class="mm-menu__link-text">Statement</span>-->
+    <!--  </a>-->
+    <!--</li>-->
+    <!--<li class="mm-menu__item list-group panel" id="MainMenu">-->
+    <!--	<a class="mm-menu__link list-group-item" data-toggle="collapse" href="#work" data-parent="#MainMenu">-->
+    <!--		<span>Work</span>-->
+    <!--	</a>-->
+    <!--	<div class="collapse" id="work">            -->
+    <!--            <a ng-href="#/work/2015" class="list-group-item sub-item" data-parent="#SubMenu1">2015</a>-->
+    <!--            <a ng-href="#/work/2014" class="list-group-item sub-item" data-parent="#SubMenu1">2014</a>-->
+    <!--            <a ng-href="#/work/2013" class="list-group-item sub-item" data-parent="#SubMenu1">2013</a>-->
+    <!--	</div>-->
+    <!--</li>-->
+    </li>
+    <li class="mm-menu__item">
+      <a class="mm-menu__link" href="#/contact">
+        <span class="mm-menu__link-text">Connect</span>
+      </a>
+    </li>
+  </ul>

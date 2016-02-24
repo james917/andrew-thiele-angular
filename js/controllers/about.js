@@ -5,11 +5,21 @@ aboutController.controller('AboutController', ['$scope', function($scope) {
 
 
 
- $('body').removeClass('home');    
- $('body').addClass('aboutBody'); 
+ // $('body').removeClass('home');    
+ // $('body').addClass('aboutBody'); 
+ 
+ 
+ $('body').removeClass('home'); 
+ $('body').removeClass('statementBody'); 
+ $('body').removeClass('workBody'); 
+ $('body').removeClass('contactBody'); 
+$('body').addClass('aboutBody');
+ 
+ 
+ 
 
     
- $('.mm-menu-toggle').addClass('menuTitleAbout');
+ //$('.mm-menu-toggle').addClass('menuTitleAbout');
    
    
 

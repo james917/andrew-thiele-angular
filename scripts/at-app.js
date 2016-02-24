@@ -1,4 +1,4 @@
-/*! andrew-thiele - v1.0.0 - 2016-02-16 */var AndrewApp = angular.module('AndrewApp', [
+/*! andrew-thiele - v1.0.0 - 2016-02-24 */var AndrewApp = angular.module('AndrewApp', [
     'ngRoute', 
     'ngAnimate',
     'appControllers'
@@ -26,25 +26,17 @@
       templateUrl: 'views/work.html',
       controller:  'WorkController',
     }).
-    when('/work/2016', {
-      templateUrl: 'views/work/work-2016.html',
-    //  controller:  'WorkGalOneController',
-    }).
     when('/work/2015', {
       templateUrl: 'views/work/work-2015.html',
-      // controller:  'WorkController',
+      controller:  'WorkTwentyFifteenController',
     }).
     when('/work/2014', {
       templateUrl: 'views/work/work-2014.html',
-      // controller:  'WorkController',
+      controller:  'WorkTwentyFourteenController',
     }).
     when('/work/2013', {
       templateUrl: 'views/work/work-2013.html',
-      // controller:  'WorkController',
-    }).
-    when('/work/1985', {
-      templateUrl: 'views/work/work-1985.html',
-      // controller:  'WorkController',
+      controller:  'WorkTwentyThirteenController',
     }).
     when('/contact', {
       templateUrl: 'views/contact.html',
@@ -68,11 +60,21 @@ aboutController.controller('AboutController', ['$scope', function($scope) {
 
 
 
- $('body').removeClass('home');    
- $('body').addClass('aboutBody'); 
+ // $('body').removeClass('home');    
+ // $('body').addClass('aboutBody'); 
+ 
+ 
+ $('body').removeClass('home'); 
+ $('body').removeClass('statementBody'); 
+ $('body').removeClass('workBody'); 
+ $('body').removeClass('contactBody'); 
+$('body').addClass('aboutBody');
+ 
+ 
+ 
 
     
- $('.mm-menu-toggle').addClass('menuTitleAbout');
+ //$('.mm-menu-toggle').addClass('menuTitleAbout');
    
    
 
@@ -91,12 +93,15 @@ var contactController = angular.module('contactController', []);
 
 contactController.controller('ContactController', ['$scope', function($scope) {
 
- $('body').removeClass('home');    
+ $('body').removeClass('home'); 
+ $('body').removeClass('aboutBody'); 
+ // $('body').removeClass('statementBody'); 
+ // $('body').removeClass('workBody'); 
  $('body').addClass('aboutBody'); 
 
 
 
-//var menu = new Menu;
+var menu = new Menu;
 
 
 console.log('Contact works even better!!!');
@@ -110,7 +115,10 @@ var appControllers = angular.module('appControllers', [
     'statementController',
     'contactController',
     'workController',
-    'workGalOneController',
+    'workTwentyFifteenController',
+    'workTwentyFourteenController',
+    'workTwentyThirteenController',
+    //'workGalOneController',
  
  
  
@@ -126,8 +134,16 @@ var homeController = angular.module('homeController', []);
 
 homeController.controller('HomeController', ['$scope', function($scope) {
 
-  $('body').addClass('home');
-  $('body').removeClass('aboutBody');  
+  // $('body').addClass('home');
+  // $('body').removeClass('aboutBody');  
+  
+ $('body').addClass('home'); 
+ $('body').removeClass('aboutBody'); 
+ $('body').removeClass('statementBody'); 
+ $('body').removeClass('workBody'); 
+ $('body').removeClass('contactBody'); 
+
+  
    
    
    
@@ -135,8 +151,13 @@ homeController.controller('HomeController', ['$scope', function($scope) {
    
    
    
-  $('.mm-menu-toggle').addClass('menuTitleHome');
-  $('.mm-menu-toggle').removeClass('menuTitleAbout');
+//   $('.mm-menu-toggle').addClass('menuTitleAbout');
+//   $('.mm-menu-toggle').removeClass('menuTitleHome');
+ 
+//   $('.mm-menu-toggle').removeClass('menuTitleHomeHide');
+//   $('.mm-menu-toggle').addClass('aboutTitleHomeHide'); 
+//   $('.mm-menu-toggle').removeClass('menuTitleHomeHide');
+   
    
 
 // $("[data-toggle=popover]")
@@ -165,6 +186,120 @@ var menu = new Menu;
 // .popover({html:true});   
 
 
+//  $(function(){ 
+//      var navMain = $("#mainMenu");
+//      navMain.on("click", "a", null, function () {
+//          navMain.collapse('hide');
+//      });
+//  });
+
+
+
+//  $(function(){ 
+//      var navMain = $("#mm-menu");
+//      navMain.on("click", "a", null, function () {
+//          navMain.collapse('hide');
+//      });
+//  });
+
+
+
+
+//$( "#test" ).removeClass(" mm-menu-open");
+
+
+// $("#test").click(function(event) {
+//   event.preventDefault();
+//   $(this).parents('.active').remove();
+// });
+
+
+// $("a").click(function() {
+// //   event.preventDefault();
+//   $(this).parents('.mm-menu').parents('.active').remove();
+// });
+
+
+// $("#test").click(function() {
+// //   event.preventDefault();
+//   $(this).parents('.active').add();
+// });
+
+
+// $('a').on("click", function () {
+//     $(this).parents('.mm-menu').fadeOut( "slow", "linear" );
+//   // $(this).parents('.mm-menu').fadeIn();
+
+// });
+
+
+// $('a').on("click", function () {
+//     $(this).parents('.hideMe').fadeOut( "slow", "linear" );
+//   // $(this).parents('.mm-menu').fadeIn();
+  
+// });
+
+
+
+   //mm-menu__link
+
+// $("button").click(function() {
+// //   event.preventDefault();
+//   $(this).children('#mm-menu').addClass('sho');
+// });
+
+
+// $('button').on("click", function () {
+//     $(this).child('#mm-menu').fadeIn();
+//   console.log('works!');
+
+// });
+
+// $("a").click(function () {
+//     // e.stopPropagation();
+//     //$(this).children('.hideMe').addClass('show');
+//     var test = $("#mm-menu-toggle");
+//     console.log('works');
+//      $('nav').addClass('hideMe');
+//      $
+// });
+
+
+
+
+
+// $("#mm-menu-toggle").click(function () {
+//     // e.stopPropagation();
+//     //$(this).children('.hideMe').addClass('show');
+//     console.log('works');
+//      $('nav').toggleClass('hideMe');
+// });
+
+// $( "a" ).click(function() {
+//   $( "nav" ).slideToggle( "slow" );
+// });
+
+
+// $('#mm-menu').css('display','block');
+
+
+
+
+$("a").click(function() {
+    $(this).parents('nav').hide();
+    // $(this).parents('.active').removeClass('active');
+});
+
+
+$("button").click(function() {
+    $("nav").show();
+   
+});
+
+// $("button").click(function() {
+//     $("menuTitleAbout").show();
+// });
+
 
 
 console.log('nav controller works!!!');
@@ -175,11 +310,15 @@ var statementController = angular.module('statementController', []);
 statementController.controller('StatementController', ['$scope', function($scope) {
 
 
- $('body').removeClass('home');    
- $('body').addClass('aboutBody'); 
+ $('body').removeClass('home'); 
+ $('body').removeClass('aboutBody'); 
+ $('body').removeClass('workBody'); 
+ $('body').removeClass('contactBody'); 
+ $('body').addClass('statementBody');
+  
 
     
- $('.mm-menu-toggle').addClass('menuTitleAbout');
+ // $('.mm-menu-toggle').addClass('menuTitleAbout');
    
 
 
@@ -188,91 +327,161 @@ statementController.controller('StatementController', ['$scope', function($scope
 console.log('Statment works even better!!!');
 
 }]);
-var workGalOneController = angular.module('workGalOneController', []);
+var workTwentyThirteenController = angular.module('workTwentyThirteenController', []);
 
-workGalOneController.controller('WorkGalOneController', ['$scope', function($scope) {
+workTwentyThirteenController.controller('WorkTwentyThirteenController', ['$scope', function($scope) {
 
+//  $('body').addClass('aboutBody');
+//  $('body').removeClass('home'); 
 
-
-
-
-$('body').addClass('aboutBody');
-$('body').removeClass('home');    
-
-$('.mm-menu-toggle').addClass('menuTitleAbout');
-
-
-
-// slider
-// $('#myCarousel').carousel({
-//     interval: 4000
-// });
-
-// handles the carousel thumbnails
-// $('[id^=carousel-selector-]').click( function(){
-//   var id_selector = $(this).attr("id");
-//   var id = id_selector.substr(id_selector.length -1);
-//   id = parseInt(id);
-//   $('#myCarousel').carousel(id);
-//   $('[id^=carousel-selector-]').removeClass('selected');
-//   $(this).addClass('selected');
-// });
-
-// when the carousel slides, auto update
-// $('#myCarousel').on('slid', function (e) {
-//   var id = $('.item.active').data('slide-number');
-//   id = parseInt(id);
-//   $('[id^=carousel-selector-]').removeClass('selected');
-//   $('[id=carousel-selector-'+id+']').addClass('selected');
-// });
+ $('body').removeClass('home'); 
+ $('body').removeClass('aboutBody'); 
+ $('body').removeClass('statementBody'); 
+ $('body').removeClass('contactBody'); 
+ $('body').addClass('workBody');
 
 
 
 
-//   $scope.myInterval = 3000;
-  $scope.slides = [
-    {
-      image: 'images/gallery/2016/slide-1.jpg',
-      id: 0
-    },
-    {
-      image: 'images/gallery/2016/slide-2.jpg',
-      id: 1
-    },
-    {
-      image: 'images/gallery/2016/slide-3.jpg',
-       id: 2
+ 
+//   $('.mm-menu-toggle').addClass('menuTitleAbout');
+ 
+  	 $(document).ready(function() {
+// 			$("#content-slider").lightSlider({
+//                 loop:true,
+//                 keyPress:true
+//             });
+         var slider2013 =   $('#2013-gallery').lightSlider({
+                gallery:true,
+                item:1,
+                thumbItem:7,
+                slideMargin: 0,
+                adaptiveHeight: false,
+                vThumbWidth: 100,
+                speed:1000,
+                auto:false,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#2013-gallery').removeClass('cS-hidden');
+                }  
+            });
+
+          $('#goToPrevSlide2013').click(function(){
+                slider2013.goToPrevSlide(); 
+            });
+          
+          $('#goToNextSlide2013').click(function(){
+                slider2013.goToNextSlide(); 
+            });            
+            
+            
+            
+            
+		});
+
+
+
+
+
+
+console.log('Work works even better!!!');
+
+}]);
+var workTwentyFourteenController = angular.module('workTwentyFourteenController', []);
+
+workTwentyFourteenController.controller('WorkTwentyFourteenController', ['$scope', function($scope) {
+
+//  $('body').addClass('aboutBody');
+//  $('body').removeClass('home');   
+
+ $('body').removeClass('home'); 
+ $('body').removeClass('aboutBody'); 
+ $('body').removeClass('statementBody'); 
+ $('body').removeClass('contactBody'); 
+ $('body').addClass('workBody');
+
+
+
+
+ 
+//   $('.mm-menu-toggle').addClass('menuTitleAbout');
+ 
+  	 $(document).ready(function() {
+
+          var slider2014 =   $('#2014-gallery').lightSlider({
+                gallery:true,
+                item:1,
+                thumbItem:8,
+                slideMargin: 0,
+                adaptiveHeight: false,
+                speed:1000,
+                auto:false,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#2014-gallery').removeClass('cS-hidden');
+                }  
+            });
         
-    },
-    {
-      image: 'images/gallery/2016/slide-4.jpg',
-      id: 3
-    },
-    {
-      image: 'images/gallery/2016/slide-5.jpg',
-      id: 4
-    },
-    {
-      image: 'images/gallery/2016/slide-6.jpg',
-      id: 5
-    },
-    {
-      image: 'images/gallery/2016/slide-7.jpg',
-      id: 6
-    },
-    {
-      image: 'images/gallery/2016/slide-8.jpg',
-      id: 7
-    
-        
-    },
-    {
-      image: 'images/gallery/2016/slide-9.jpg',
-      id: 8
-    }
-    
-    
-  ];
+            $('#goToPrevSlide2014').click(function(){
+                slider2014.goToPrevSlide(); 
+            });
+          
+          $('#goToNextSlide2014').click(function(){
+                slider2014.goToNextSlide(); 
+            });     
+            
+		});
+
+
+
+
+
+console.log('Work works even better!!!');
+
+}]);
+var workTwentyFifteenController = angular.module('workTwentyFifteenController', []);
+
+workTwentyFifteenController.controller('WorkTwentyFifteenController', ['$scope', function($scope) {
+
+ // $('body').addClass('aboutBody');
+ // $('body').removeClass('home');   
+ 
+ $('body').removeClass('home'); 
+ $('body').removeClass('aboutBody'); 
+ $('body').removeClass('statementBody'); 
+ $('body').removeClass('contactBody'); 
+ $('body').addClass('workBody');
+
+ 
+ 
+ 
+  // $('.mm-menu-toggle').addClass('menuTitleAbout');
+ 
+  	 $(document).ready(function() {
+
+          var slider2015 =   $('#2015-gallery').lightSlider({
+                gallery:true,
+                item:1,
+                thumbItem:10,
+                slideMargin: 0,
+                adaptiveHeight: false,
+                speed:1000,
+                auto:false,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#2015-gallery').removeClass('cS-hidden');
+                }  
+            });
+            
+          $('#goToPrevSlide2015').click(function(){
+                slider2015.goToPrevSlide(); 
+            });
+          
+          $('#goToNextSlide2015').click(function(){
+                slider2015.goToNextSlide(); 
+            });              
+            
+		});
 
 
 
@@ -284,42 +493,46 @@ var workController = angular.module('workController', []);
 
 workController.controller('WorkController', ['$scope', function($scope) {
 
- $('body').addClass('aboutBody');
- $('body').removeClass('home');   
+ // $('body').addClass('aboutBody');
+ // $('body').removeClass('home'); 
  
-  $('.mm-menu-toggle').addClass('menuTitleAbout');
+ $('body').removeClass('home'); 
+ $('body').removeClass('aboutBody'); 
+ $('body').removeClass('statementBody'); 
+ $('body').removeClass('contactBody'); 
+ $('body').addClass('workBody'); 
+
+ 
+ 
+ 
+ 
+  //$('.mm-menu-toggle').addClass('menuTitleAbout');
  
   	 $(document).ready(function() {
-			$("#content-slider").lightSlider({
-                loop:true,
-                keyPress:true
-            });
-            $('#image-gallery').lightSlider({
+
+          var slider =   $('#main-gallery').lightSlider({
                 gallery:true,
                 item:1,
                 thumbItem:9,
                 slideMargin: 0,
-                adaptiveHeight: false,
                 speed:1000,
                 auto:false,
                 loop:true,
                 onSliderLoad: function() {
-                    $('#image-gallery').removeClass('cS-hidden');
+                    $('#main-gallery').removeClass('cS-hidden');
                 }  
             });
+                   $('#goToPrevSlide').click(function(){
+                slider.goToPrevSlide(); 
+            });
+          
+          $('#goToNextSlide').click(function(){
+                slider.goToNextSlide(); 
+            });   
+            
+            
 		});
 
-
-
-        // $('#adaptive').lightSlider({
-        //     adaptiveHeight:true,
-        //     item:1,
-        //     slideMargin:0,
-        //     loop:true,
-        //     onSliderLoad: function() {
-        //         $('#adaptive').removeClass('cS-hidden');
-        //     } 
-        // });
 
 
 

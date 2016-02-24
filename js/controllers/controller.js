@@ -6,7 +6,10 @@ var appControllers = angular.module('appControllers', [
     'statementController',
     'contactController',
     'workController',
-    'workGalOneController',
+    'workTwentyFifteenController',
+    'workTwentyFourteenController',
+    'workTwentyThirteenController',
+    //'workGalOneController',
  
  
  
