@@ -8,7 +8,7 @@ var AndrewApp = angular.module('AndrewApp', [
 
 // var appControllers = angular.module('appControllers', []);
 
-.config(['$routeProvider', function($routeProvider) {
+.config(['$routeProvider', function($routeProvider,$httpProvider) {
   $routeProvider.
     when('/', {
       templateUrl: 'views/home.html',

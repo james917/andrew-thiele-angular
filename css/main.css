@@ -6752,6 +6752,25 @@ a:focus {
   color: #1b1b1b;
   text-decoration: none;
 }
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  outline: none;
+}
+.btn:active,
+.btn.active {
+  outline: none;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+  outline: 0;
+  outline-offset: -2px;
+}
 /* =============================================================================
   BOX SIZING AND CLEARFIX
 ============================================================================= */
@@ -6881,18 +6900,12 @@ section {
   font-weight: 400;
   z-index: 10;
 }
-a.NewmenuTitleHome {
-  color: #fff;
-}
-.menuTitleHome {
-  color: #fff;
-}
-.menuTitleHomeHide {
-  display: none;
-  color: transparent;
-}
-.menuTitleAbout {
+.menuTitleDark {
   color: #333;
+  border: solid 1px red;
+}
+.menuTitleLight {
+  color: #fff;
 }
 .menuTitleAboutTrans {
   color: #fff;
@@ -6922,12 +6935,6 @@ a.NewmenuTitleHome {
   transition: all 0.5s;
 }
 /* active states */
-.mm-menu-toggle.fade-out.menuTitleHome.active {
-  color: #fff;
-}
-.mm-menu-toggle.menuTitleAbout.active {
-  color: #fff;
-}
 .mm-menu-toggle.active::before {
   width: 75%;
   -webkit-transform: translateY(7px) rotate(-45deg);
@@ -6967,13 +6974,11 @@ a.NewmenuTitleHome {
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
-@media all and (min-width: 300px) {
-  .mm-menu {
-    width: 80%;
-    -webkit-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
+.mm-menu {
+  width: 80%;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 /* header */
 .mm-menu__header {
@@ -6997,6 +7002,9 @@ a.NewmenuTitleHome {
   font-weight: 400;
 }
 /* list */
+.headerLink {
+  margin: 0 !important;
+}
 .mm-menu__items {
   list-style: none;
   margin: 40px 0 0 0;
@@ -7136,7 +7144,7 @@ a.NewmenuTitleHome {
 }
 .about {
   line-height: 240%;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #f4f4f4;
   margin: 50px auto;
   color: #727375;
@@ -7181,10 +7189,25 @@ a.NewmenuTitleHome {
   width: 50px !important;
   margin-right: 5px !important;
 }
+#Gal2014 .lSSlideOuter .lSPager.lSGallery {
+  margin: 0;
+}
+#Gal2014 .lSSlideWrapper {
+  border: solid 1px #ccc;
+}
+#Gal2015 .lSSlideOuter .lSPager.lSGallery {
+  margin: 0;
+}
+#Gal2015 .lSSlideWrapper {
+  border: solid 1px #ccc;
+}
+#Gal2015 .lSGallery li {
+  margin-right: 3px !important;
+}
 .newNext {
   position: absolute;
   top: 37%;
-  left: 10px;
+  left: 63px;
   width: auto;
   height: 68px;
   background-image: url('../images/controls.png');
@@ -7194,7 +7217,7 @@ a.NewmenuTitleHome {
 .newPrev {
   position: absolute;
   top: 37%;
-  right: 10px;
+  right: 56px;
   width: auto;
   height: 68px;
   background-image: url('../images/controls.png');
@@ -7202,6 +7225,118 @@ a.NewmenuTitleHome {
   background-repeat: no-repeat;
   background-position-x: -40px;
 }
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#wrapper.toggled {
+  padding-left: 250px;
+}
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+/* Sidebar Styles */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+}
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+@media (min-width: 768px) {
+  #wrapper {
+    padding-left: 250px;
+  }
+  #wrapper.toggled {
+    padding-left: 0;
+  }
+  #sidebar-wrapper {
+    width: 250px;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0;
+  }
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .home {
+    background-color: red;
+    background-image: none;
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-attachment: none;
+    background-size: inherit;
+  }
+}
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
 /*! lightslider - v1.1.3 - 2015-04-14
 * https://github.com/sachinchoolur/lightslider
 * Copyright (c) 2015 Sachin N; Licensed MIT */
@@ -7228,6 +7363,7 @@ a.NewmenuTitleHome {
   max-width: 100%;
   overflow: hidden;
   position: relative;
+  border: solid 1px #ccc;
 }
 .lSSlideWrapper > .lightSlider:after {
   clear: both;
@@ -7313,7 +7449,7 @@ a.NewmenuTitleHome {
 .lSSlideOuter .lSPager.lSGallery {
   list-style: none outside none;
   padding-left: 0;
-  margin: 0;
+  margin: 0 0 0 20%;
   overflow: hidden;
   transform: translate3d(0px, 0px, 0px);
   -moz-transform: translate3d(0px, 0px, 0px);
@@ -7336,7 +7472,7 @@ a.NewmenuTitleHome {
 }
 .lSSlideOuter .lSPager.lSGallery li.active,
 .lSSlideOuter .lSPager.lSGallery li:hover {
-  border-radius: 5px;
+  border-radius: 0;
 }
 .lSSlideOuter .lSPager.lSGallery img {
   display: block;

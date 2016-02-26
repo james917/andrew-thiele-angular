@@ -117,7 +117,8 @@ var menu = new Menu;
 
 $("a").click(function() {
     $(this).parents('nav').hide();
-    // $(this).parents('.active').removeClass('active');
+    // $(this).parents('nav').removeAttr( 'active' );
+    // $(this).parents('button').removeAttr( 'active' );
 });
 
 
@@ -126,9 +127,12 @@ $("button").click(function() {
    
 });
 
+// $('.mm-menu-toggle').addClass('menuTitleDark');
+
 // $("button").click(function() {
 //     $("menuTitleAbout").show();
 // });
+
 
 
 

@@ -19,7 +19,18 @@ $('body').addClass('aboutBody');
  
 
     
- //$('.mm-menu-toggle').addClass('menuTitleAbout');
+ // $('.mm-menu-toggle').addClass('menuTitleAbout');
+  // $('.mm-menu-toggle').addClass('test');
+  
+// $(".mm-menu-toggle").click(function() {
+//    $('.mm-menu-toggle').removeClass('menuTitleDark');
+//    $('.mm-menu-toggle').addClass('menuTitleLight');
+   
+// });
+  
+  
+ 
+ 
    
    
 

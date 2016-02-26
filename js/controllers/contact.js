@@ -13,6 +13,9 @@ contactController.controller('ContactController', ['$scope', function($scope) {
 var menu = new Menu;
 
 
+  $('.mm-menu-toggle').addClass('menuTitleAbout');
+  $('.mm-menu-toggle').removeClass('menuTitleHome');
+
 console.log('Contact works even better!!!');
 
 }]);

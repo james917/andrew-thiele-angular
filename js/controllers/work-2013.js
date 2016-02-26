@@ -12,8 +12,14 @@ workTwentyThirteenController.controller('WorkTwentyThirteenController', ['$scope
  $('body').addClass('workBody');
 
 
+// $(".mm-menu-toggle").click(function() {
+//   $('.mm-menu-toggle').removeClass('menuTitleDark');
+//   $('.mm-menu-toggle').addClass('menuTitleLight');
+   
+// });
 
-
+//   $('.mm-menu-toggle').addClass('menuTitleAbout');
+//   $('.mm-menu-toggle').removeClass('menuTitleHome');
  
 //   $('.mm-menu-toggle').addClass('menuTitleAbout');
  

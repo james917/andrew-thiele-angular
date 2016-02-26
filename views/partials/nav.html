@@ -1,12 +1,17 @@
 <div ng-controller="NavController" class="mm-menu__header">
-    <a class="NewmenuTitleHome" ng-href="#/">Andrew Thiele</a>
+    <!--<h1 class="NewmenuTitleHome"><a ng-href="#/">Andrew Thiele</a></h1>-->
+    
+ <ul class="mm-menu__items headerLink">
+      <li class="mm-menu__item ">
+      <a class="mm-menu__link" ng-href="#/">
+        <span class="NewmenuTitleHome">Andrew Thiele</span>
+      </a>
+    </li>    
+  </ul>  
+    
+    
 </div>
  <ul class="mm-menu__items">
-    <!--<li class="mm-menu__item">-->
-    <!--  <a id="" class="mm-menu__link" ng-href="#/">-->
-    <!--    <span class="mm-menu__link-text">Home</span>-->
-    <!--  </a>-->
-    <!--</li>-->
     <li class="mm-menu__item">
       <a class="mm-menu__link" ng-href="#/about">
         <span class="mm-menu__link-text">About</span>

@@ -19,12 +19,12 @@ homeController.controller('HomeController', ['$scope', function($scope) {
    
    
    
-//   $('.mm-menu-toggle').addClass('menuTitleAbout');
-//   $('.mm-menu-toggle').removeClass('menuTitleHome');
+  $('.mm-menu-toggle').addClass('menuTitleAbout');
+  $('.mm-menu-toggle').removeClass('menuTitleHome');
  
-//   $('.mm-menu-toggle').removeClass('menuTitleHomeHide');
-//   $('.mm-menu-toggle').addClass('aboutTitleHomeHide'); 
-//   $('.mm-menu-toggle').removeClass('menuTitleHomeHide');
+//   $('.mm-menu-toggle').removeClass('menuTitleHome');
+//   $('.mm-menu-toggle').addClass('aboutTitleHome'); 
+//   $('.mm-menu-toggle').removeClass('menuTitleHome');
    
    
 

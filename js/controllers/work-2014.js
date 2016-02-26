@@ -12,8 +12,14 @@ workTwentyFourteenController.controller('WorkTwentyFourteenController', ['$scope
  $('body').addClass('workBody');
 
 
+// $(".mm-menu-toggle").click(function() {
+//   $('.mm-menu-toggle').removeClass('menuTitleDark');
+//   $('.mm-menu-toggle').addClass('menuTitleLight');
+   
+// });
 
-
+//   $('.mm-menu-toggle').addClass('menuTitleAbout');
+//   $('.mm-menu-toggle').removeClass('menuTitleHome');
  
 //   $('.mm-menu-toggle').addClass('menuTitleAbout');
  
@@ -22,7 +28,7 @@ workTwentyFourteenController.controller('WorkTwentyFourteenController', ['$scope
           var slider2014 =   $('#2014-gallery').lightSlider({
                 gallery:true,
                 item:1,
-                thumbItem:8,
+                thumbItem:12,
                 slideMargin: 0,
                 adaptiveHeight: false,
                 speed:1000,

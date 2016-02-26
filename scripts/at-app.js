@@ -1,4 +1,4 @@
-/*! andrew-thiele - v1.0.0 - 2016-02-24 */var AndrewApp = angular.module('AndrewApp', [
+/*! andrew-thiele - v1.0.0 - 2016-02-26 */var AndrewApp = angular.module('AndrewApp', [
     'ngRoute', 
     'ngAnimate',
     'appControllers'
@@ -8,7 +8,7 @@
 
 // var appControllers = angular.module('appControllers', []);
 
-.config(['$routeProvider', function($routeProvider) {
+.config(['$routeProvider', function($routeProvider,$httpProvider) {
   $routeProvider.
     when('/', {
       templateUrl: 'views/home.html',
@@ -74,7 +74,18 @@ $('body').addClass('aboutBody');
  
 
     
- //$('.mm-menu-toggle').addClass('menuTitleAbout');
+ // $('.mm-menu-toggle').addClass('menuTitleAbout');
+  // $('.mm-menu-toggle').addClass('test');
+  
+// $(".mm-menu-toggle").click(function() {
+//    $('.mm-menu-toggle').removeClass('menuTitleDark');
+//    $('.mm-menu-toggle').addClass('menuTitleLight');
+   
+// });
+  
+  
+ 
+ 
    
    
 
@@ -104,6 +115,9 @@ contactController.controller('ContactController', ['$scope', function($scope) {
 var menu = new Menu;
 
 
+  $('.mm-menu-toggle').addClass('menuTitleAbout');
+  $('.mm-menu-toggle').removeClass('menuTitleHome');
+
 console.log('Contact works even better!!!');
 
 }]);
@@ -111,6 +125,7 @@ var appControllers = angular.module('appControllers', [
 
     'homeController',
     'navController',
+    'navMobileController',
     'aboutController',
     'statementController',
     'contactController',
@@ -151,12 +166,12 @@ homeController.controller('HomeController', ['$scope', function($scope) {
    
    
    
-//   $('.mm-menu-toggle').addClass('menuTitleAbout');
-//   $('.mm-menu-toggle').removeClass('menuTitleHome');
+  $('.mm-menu-toggle').addClass('menuTitleAbout');
+  $('.mm-menu-toggle').removeClass('menuTitleHome');
  
-//   $('.mm-menu-toggle').removeClass('menuTitleHomeHide');
-//   $('.mm-menu-toggle').addClass('aboutTitleHomeHide'); 
-//   $('.mm-menu-toggle').removeClass('menuTitleHomeHide');
+//   $('.mm-menu-toggle').removeClass('menuTitleHome');
+//   $('.mm-menu-toggle').addClass('aboutTitleHome'); 
+//   $('.mm-menu-toggle').removeClass('menuTitleHome');
    
    
 
@@ -166,6 +181,23 @@ homeController.controller('HomeController', ['$scope', function($scope) {
 
 
 console.log('Home works even better!!!');
+
+}]);
+var navMobileController = angular.module('navMobileController', []);
+
+navMobileController.controller('NavMobileController', ['$scope', function($scope, $location) {
+
+
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+
+
+
+
+console.log('nav mobile controller works!!!');
 
 }]);
 var navController = angular.module('navController', []);
@@ -287,7 +319,8 @@ var menu = new Menu;
 
 $("a").click(function() {
     $(this).parents('nav').hide();
-    // $(this).parents('.active').removeClass('active');
+    // $(this).parents('nav').removeAttr( 'active' );
+    // $(this).parents('button').removeAttr( 'active' );
 });
 
 
@@ -296,9 +329,12 @@ $("button").click(function() {
    
 });
 
+// $('.mm-menu-toggle').addClass('menuTitleDark');
+
 // $("button").click(function() {
 //     $("menuTitleAbout").show();
 // });
+
 
 
 
@@ -341,8 +377,14 @@ workTwentyThirteenController.controller('WorkTwentyThirteenController', ['$scope
  $('body').addClass('workBody');
 
 
+// $(".mm-menu-toggle").click(function() {
+//   $('.mm-menu-toggle').removeClass('menuTitleDark');
+//   $('.mm-menu-toggle').addClass('menuTitleLight');
+   
+// });
 
-
+//   $('.mm-menu-toggle').addClass('menuTitleAbout');
+//   $('.mm-menu-toggle').removeClass('menuTitleHome');
  
 //   $('.mm-menu-toggle').addClass('menuTitleAbout');
  
@@ -401,8 +443,14 @@ workTwentyFourteenController.controller('WorkTwentyFourteenController', ['$scope
  $('body').addClass('workBody');
 
 
+// $(".mm-menu-toggle").click(function() {
+//   $('.mm-menu-toggle').removeClass('menuTitleDark');
+//   $('.mm-menu-toggle').addClass('menuTitleLight');
+   
+// });
 
-
+//   $('.mm-menu-toggle').addClass('menuTitleAbout');
+//   $('.mm-menu-toggle').removeClass('menuTitleHome');
  
 //   $('.mm-menu-toggle').addClass('menuTitleAbout');
  
@@ -411,7 +459,7 @@ workTwentyFourteenController.controller('WorkTwentyFourteenController', ['$scope
           var slider2014 =   $('#2014-gallery').lightSlider({
                 gallery:true,
                 item:1,
-                thumbItem:8,
+                thumbItem:12,
                 slideMargin: 0,
                 adaptiveHeight: false,
                 speed:1000,
@@ -453,7 +501,13 @@ workTwentyFifteenController.controller('WorkTwentyFifteenController', ['$scope',
  $('body').addClass('workBody');
 
  
- 
+//  $(".mm-menu-toggle").click(function() {
+//   $('.mm-menu-toggle').removeClass('menuTitleDark');
+//   $('.mm-menu-toggle').addClass('menuTitleLight');
+   
+// });
+//   $('.mm-menu-toggle').addClass('menuTitleAbout');
+//   $('.mm-menu-toggle').removeClass('menuTitleHome');
  
   // $('.mm-menu-toggle').addClass('menuTitleAbout');
  
@@ -462,7 +516,7 @@ workTwentyFifteenController.controller('WorkTwentyFifteenController', ['$scope',
           var slider2015 =   $('#2015-gallery').lightSlider({
                 gallery:true,
                 item:1,
-                thumbItem:10,
+                thumbItem:15,
                 slideMargin: 0,
                 adaptiveHeight: false,
                 speed:1000,
@@ -502,11 +556,16 @@ workController.controller('WorkController', ['$scope', function($scope) {
  $('body').removeClass('contactBody'); 
  $('body').addClass('workBody'); 
 
+//  $(".mm-menu-toggle").click(function() {
+//    $('.mm-menu-toggle').removeClass('menuTitleDark');
+//    $('.mm-menu-toggle').addClass('menuTitleLight');
+   
+// });
  
+ // $('.mm-menu-toggle').addClass('menuTitleAbout');
+ // $('.mm-menu-toggle').removeClass('menuTitleHome');
  
- 
- 
-  //$('.mm-menu-toggle').addClass('menuTitleAbout');
+  // $('.mm-menu-toggle').addClass('menuTitleAbout');
  
   	 $(document).ready(function() {
 

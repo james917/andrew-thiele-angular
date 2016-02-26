@@ -12,7 +12,13 @@ workTwentyFifteenController.controller('WorkTwentyFifteenController', ['$scope',
  $('body').addClass('workBody');
 
  
- 
+//  $(".mm-menu-toggle").click(function() {
+//   $('.mm-menu-toggle').removeClass('menuTitleDark');
+//   $('.mm-menu-toggle').addClass('menuTitleLight');
+   
+// });
+//   $('.mm-menu-toggle').addClass('menuTitleAbout');
+//   $('.mm-menu-toggle').removeClass('menuTitleHome');
  
   // $('.mm-menu-toggle').addClass('menuTitleAbout');
  
@@ -21,7 +27,7 @@ workTwentyFifteenController.controller('WorkTwentyFifteenController', ['$scope',
           var slider2015 =   $('#2015-gallery').lightSlider({
                 gallery:true,
                 item:1,
-                thumbItem:10,
+                thumbItem:15,
                 slideMargin: 0,
                 adaptiveHeight: false,
                 speed:1000,
