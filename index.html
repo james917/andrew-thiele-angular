@@ -9,10 +9,7 @@
     <link rel="icon" href="">
 
     <title>Andrew Thiele: Portfolio</title>
-    <!--<meta property="og:title" content="Andrew Thiele">-->
-    <!--<meta property="og:site_name" content="Andrew Thiele">-->
-    <!--<meta property="og:url" content="http://andrewthiele.com">-->
-    <!--<meta property="og:image" content="">-->
+
     <link href="css/main.css" rel="stylesheet">
 
 
@@ -25,33 +22,16 @@
   <body>
 
     <!--<div id="wrapper">-->
+     <!--<div id="wrapper">-->
     <div id="wrapper" class="wrapper">
-        <div id="sidebar-wrapper" ng-include="'views/partials/nav-mobile.html'"></div>
-       <a href="#menu-toggle" class="btn btn-default hidden-lg" data-toggle="collapse" data-target=".navbar-collapse" id="menu-toggle">Toggle Menu</a>
-    <!-- <nav class="navbar navbar-inverse navbar-fixed-top" ng-include="'views/partials/nav-mobile.html'">-->
-    <!--  <div class="container">-->
-    <!--    <div class="navbar-header">-->
-    <!--      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
-    <!--        <span class="sr-only">Toggle navigation</span>-->
-    <!--        <span class="icon-bar"></span>-->
-    <!--        <span class="icon-bar"></span>-->
-    <!--        <span class="icon-bar"></span>-->
-    <!--      </button>-->
-    <!--      <a class="navbar-brand" href="#">Project name</a>-->
-    <!--    </div>-->
-    <!--  </div>-->
-    <!--</nav>-->
-
-      
-      
-      <header class="header visible-lg">
+      <header class="header">
         <div class="container">
           <h1 class="header__title"></h1>
         </div>
       </header>
       <main id="page-content-wrapper" ng-view></main>
-      <button id="mm-menu-toggle" class="mm-menu-toggle visible-lg">Andrew Thiele</button>
-      <nav id="mm-menu" class="mm-menu visible-lg" ng-include="'views/partials/nav.html'"></nav>
+      <button id="mm-menu-toggle" class="mm-menu-toggle">Andrew Thiele</button>
+      <nav id="mm-menu" class="mm-menu" ng-include="'views/partials/nav.html'"></nav>
     </div>
 
 

@@ -1,4 +1,4 @@
-/*! andrew-thiele - v1.0.0 - 2016-02-26 */var AndrewApp = angular.module('AndrewApp', [
+/*! andrew-thiele - v1.0.0 - 2016-03-01 */var AndrewApp = angular.module('AndrewApp', [
     'ngRoute', 
     'ngAnimate',
     'appControllers'
@@ -188,11 +188,45 @@ var navMobileController = angular.module('navMobileController', []);
 navMobileController.controller('NavMobileController', ['$scope', function($scope, $location) {
 
 
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
+    // $("#menu-toggle").click(function(e) {
+    //     e.preventDefault();
+    //     $("#wrapper").toggleClass("toggled");
+    // });
+    
+    
+    $("#menu-toggle").click(function() {
+        // e.preventDefault();
         $("#wrapper").toggleClass("toggled");
-    });
+       
+    });  
+    
 
+     
+    // $(".navbar-collapse").click(function() {
+    //     // e.preventDefault();
+    //     $('a').collapse('hide');
+    // });      
+    
+
+
+// $(function(){ 
+//      var navMain = $(".navbar-collapse");
+
+//      navMain.on("click", "a", null, function () {
+//          navMain.collapse('hide');
+//      });
+//  });
+
+
+$("a").click(function() {
+    $(this).parents('#sidebar-wrapper').hide();
+});
+
+
+$(".btn-default").click(function() {
+    $("#sidebar-wrapper").show();
+   
+});
 
 
 

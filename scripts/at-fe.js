@@ -1,4 +1,4 @@
-/*! andrew-thiele - v1.0.0 - 2016-02-17 *//**
+/*! andrew-thiele - v1.0.0 - 2016-03-01 *//**
  * Material Menu
  *
  * The functionality for an off canvas menu, inspired by Google's material

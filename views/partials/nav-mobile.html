@@ -1,50 +1,22 @@
-<ul ng-controller="NavMobileController" class="sidebar-nav">
-    <li class="sidebar-brand">
-        <a href="#">
-            Andrew Thiele
-        </a>
-    </li>
-    <li>
-        <a href="#">About</a>
-    </li>
-    <li>
-        <a href="#">Work</a>
-    </li>
-    <li>
-        <a href="#">2015</a>
-    </li>
-    <li>
-        <a href="#">2014</a>
-    </li>
-    <li>
-        <a href="#">2013</a>
-    </li>
-    <li>
-        <a href="#">Connect</a>
-    </li>
-</ul>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/">Andrew Thiele</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a ng-href="#/about" data-toggle="collapse" data-target=".navbar-collapse.in">About</a></li>
+            <li><a ng-href="#/work" data-toggle="collapse" data-target=".navbar-collapse.in">Work</a></li>
+            <li><a ng-href="#/work/2015" data-toggle="collapse" data-target=".navbar-collapse.in">2015</a></li>
+            <li><a ng-href="#/work/2014" data-toggle="collapse" data-target=".navbar-collapse.in">2014</a></li>
+            <li><a ng-href="#/work/2013" data-toggle="collapse" data-target=".navbar-collapse.in">2013</a></li>
+            <li><a ng-href="#/contact" data-toggle="collapse" data-target=".navbar-collapse.in">Conecct</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
 
-
-
-
-
-    <!--<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavMobileController">-->
-    <!--  <div class="container">-->
-    <!--    <div class="navbar-header">-->
-    <!--      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
-    <!--        <span class="sr-only">Toggle navigation</span>-->
-    <!--        <span class="icon-bar"></span>-->
-    <!--        <span class="icon-bar"></span>-->
-    <!--        <span class="icon-bar"></span>-->
-    <!--      </button>-->
-    <!--      <a class="navbar-brand" href="#">Project name</a>-->
-    <!--    </div>-->
-    <!--    <div id="navbar" class="collapse navbar-collapse">-->
-    <!--      <ul class="nav navbar-nav">-->
-    <!--        <li class="active"><a href="#">Home</a></li>-->
-    <!--        <li><a href="#about">About</a></li>-->
-    <!--        <li><a href="#contact">Contact</a></li>-->
-    <!--      </ul>-->
-    <!--    </div>-->
-    <!--  </div>-->
-    <!--</nav>-->

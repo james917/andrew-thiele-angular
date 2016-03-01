@@ -1,4 +1,4 @@
-/*! andrew-thiele - v1.0.0 - 2016-02-17 *//**
+/*! andrew-thiele - v1.0.0 - 2016-03-01 *//**
  * @license AngularJS v1.4.4
  * (c) 2010-2015 Google, Inc. http://angularjs.org
  * License: MIT
